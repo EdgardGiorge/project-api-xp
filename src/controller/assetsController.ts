@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Exception from '../helpers/exceptionError';
+import assetsService from '../models/assetsService';
 
 const getAllAssets = async (req: Request, res: Response): Promise<Response> => {
   const assets = await assetsService.getAllAssets();
