@@ -2,9 +2,10 @@
   "name": "project-api-xp",
   "version": "1.0.0",
   "description": "Desafio Técnico do processo seletivo da Turma XP – Trybe",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --exec npx ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "express": "^4.18.1",
     "express-async-errors": "^3.1.1",
     "joi": "^17.6.0",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "ts-node": "^10.9.1"
   }
 }
