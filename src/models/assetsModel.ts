@@ -3,11 +3,22 @@ import IAssets from "../interfaces/IAssets";
 import connection from "./connection";
 
 const getAllAssets = async (): Promise<IAssets[]> => {
-  const [assets] = await connection.execute<RowDataPacket[]>('SELECT Ativo.codAtivo, Ativo.ativo, Ativo.qtdeAtivo, Ativo.valorAtivo FROM XP.Ativo ORDER BY Ativo.codAtivo;');
+  const [assets] = await connection.execute<RowDataPacket[]>('SELECT * FROM XP.Ativo ORDER BY Ativo.codAtivo;');
 
   return assets as IAssets[];
 };
 
+const getById = async (id: number): Promise<IAssets> => {
+  const [assets] = await connection.execute<RowDataPacket[]>(
+    `
+    SELECT * FROM XP.Ativo WHERE codAtivo = ?;`,
+    [id],
+  ); 
+  const [asset] = assets as IAssets[];
+  return asset as IAssets;
+};
+
   export default {
-    getAllAssets
+    getAllAssets,
+    getById,
   }  
