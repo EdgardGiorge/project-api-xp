@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
-import assetsService from '../models/assetsService';
+import assetsService from '../services/assetsService';
+
 
 const getAllAssets = async (req: Request, res: Response): Promise<Response> => {
   const assets = await assetsService.getAllAssets();
