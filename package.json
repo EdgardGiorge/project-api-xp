@@ -1,0 +1,24 @@
+{
+  "name": "project-api-xp",
+  "version": "1.0.0",
+  "description": "Desafio Técnico do processo seletivo da Turma XP – Trybe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgardGiorge/project-api-xp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdgardGiorge/project-api-xp/issues"
+  },
+  "homepage": "https://github.com/EdgardGiorge/project-api-xp#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "typescript": "^4.7.4"
+  }
+}
