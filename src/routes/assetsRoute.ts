@@ -3,6 +3,6 @@ import express from 'express'
 const route = express.Router();
 
 
-route.get('/', ativoController.getAllActive);
+route.get('/', assetsController.getAllAssets);
 
 export default route;

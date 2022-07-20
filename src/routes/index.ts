@@ -1,8 +1,8 @@
 import express from "express";
-import ativoRoute from './ativoRoute'
+import assetsRoute from './assetsRoute'
 
 const routes = express.Router();
 
-routes.use('/ativos', ativoRoute);
+routes.use('/ativos', assetsRoute);
 
 export default routes;
