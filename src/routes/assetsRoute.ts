@@ -5,6 +5,6 @@ const route = express.Router();
 
 
 route.get('/', assetsController.getAllAssets);
-route.get('/:id', assetsController.getById);
+route.get('/:codAtivo', assetsController.getById);
 
 export default route;

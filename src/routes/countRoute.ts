@@ -5,6 +5,6 @@ const countRoute = express.Router();
 
 
 countRoute.get('/', countController.getAllCount);
-countRoute.get('/:id', countController.getById);
+countRoute.get('/:codCliente', countController.getById);
 
 export default countRoute;

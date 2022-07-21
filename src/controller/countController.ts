@@ -9,8 +9,8 @@ const getAllCount = async (req: Request, res: Response): Promise<Response> => {
 };
 
 const getById = async (req: Request, res: Response): Promise<Response> => {
-  const id = parseInt(req.params.id, 10); // segundo argumento "10" pra não ter erro de radix, interpretação decimal        
-  const count = await countService.getById(id);
+  const codCliente = parseInt(req.params.codCliente, 10); // segundo argumento "10" pra não ter erro de radix, interpretação decimal        
+  const count = await countService.getById(codCliente);
 
   if (!count) throw new Exception(404, 'Count not found');
 

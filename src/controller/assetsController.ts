@@ -9,8 +9,8 @@ const getAllAssets = async (req: Request, res: Response): Promise<Response> => {
 };
 
 const getById = async (req: Request, res: Response): Promise<Response> => {
-  const id = parseInt(req.params.id, 10); // segundo argumento "10" pra não ter erro de radix, interpretação decimal        
-  const assets = await assetsService.getById(id);
+  const codAtivo = parseInt(req.params.codAtivo, 10); // segundo argumento "10" pra não ter erro de radix, interpretação decimal        
+  const assets = await assetsService.getById(codAtivo);
 
   if (!assets) throw new Exception(404, 'Aset not found');
 

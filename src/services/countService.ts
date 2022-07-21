@@ -3,7 +3,7 @@ import countModel from "../models/countModel";
 
 const getAllCount = async (): Promise<ICount[]> => countModel.getAllCount();
 
-const getById = async (id: number): Promise<ICount> => countModel.getById(id);
+const getById = async (codCliente: number): Promise<ICount> => countModel.getById(codCliente);
 
 export default {
   getAllCount,

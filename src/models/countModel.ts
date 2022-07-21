@@ -8,11 +8,11 @@ const getAllCount = async (): Promise<ICount[]> => {
   return counts as ICount[];
 };
 
-const getById = async (id: number): Promise<ICount> => {
+const getById = async (codCliente: number): Promise<ICount> => {
   const [counts] = await connection.execute<RowDataPacket[]>(
     `
     SELECT * FROM XP.Cliente WHERE codCliente = ?;`,
-    [id],
+    [codCliente],
   ); 
   const [count] = counts as ICount[];
   return count as ICount;
