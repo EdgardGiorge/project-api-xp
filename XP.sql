@@ -9,7 +9,7 @@ CREATE TABLE `Cliente`(
 );
 CREATE TABLE `Ativo`(
     `codAtivo` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `ativo` CHAR(255) NOT NULL,
+    `ativo` CHAR(255) NOT NULL UNIQUE,
     `qtdeAtivo` INT NOT NULL,
     `valorAtivo` DECIMAL(8, 2) NOT NULL,
     `data` DATETIME DEFAULT NOW()   

@@ -1,10 +1,13 @@
 import express from 'express'
+import validate from '../middlewares/validate';
 import assetsController from '../controller/assetsController';
 
-const route = express.Router();
+const assetsRoute = express.Router();
 
 
-route.get('/', assetsController.getAllAssets);
-route.get('/:codAtivo', assetsController.getById);
+assetsRoute.get('/', assetsController.getAllAssets);
+assetsRoute.get('/:codAtivo', assetsController.getById);
+assetsRoute.get('/name/:ativo', assetsController.getByAsset);
+assetsRoute.post('/', validate, assetsController.createAssets);
 
-export default route;
+export default assetsRoute;
