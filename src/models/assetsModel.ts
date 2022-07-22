@@ -3,6 +3,7 @@ import IAssets from "../interfaces/IAssets";
 import IAssetsBody from "../interfaces/IAssetsBody";
 import IAsset from "../interfaces/IAsset";
 import connection from "./connection";
+import IOrder from "../interfaces/IOrder";
 
 const getAllAssets = async (): Promise<IAssets[]> => {
   const [assets] = await connection.execute<RowDataPacket[]>('SELECT * FROM XP.Ativo ORDER BY Ativo.codAtivo;');
@@ -25,7 +26,7 @@ const getByAsset = async (ativo: string): Promise<IAsset> => {
   const [assets] = await connection.execute<RowDataPacket[]>('SELECT * FROM XP.Ativo WHERE ativo = ?', [ativo]);
   const [asset] = assets as IAsset[];
   return asset as IAsset;
-  }
+  }  
 
 const createAssets = async ({ ativo, qtdeAtivo, valorAtivo }: IAssetsBody) => {
   const [result] = await connection.execute<ResultSetHeader>(
@@ -36,9 +37,18 @@ const createAssets = async ({ ativo, qtdeAtivo, valorAtivo }: IAssetsBody) => {
   return result;
 }; // quando usa Insert usamos a tipagem ResultSetHeader
 
+const updateAsset = async (codAtivo: number, qtdeAtivo: number) => {
+  const [result] = await connection.execute<ResultSetHeader>(
+    'UPDATE XP.Ativo SET qtdeAtivo = XP.Ativo.qtdeAtivo + ? WHERE codAtivo = ?',
+    [codAtivo, qtdeAtivo],
+  );
+  return result;
+};
+
   export default {
     getAllAssets,
     getById,
     getByAsset,
-    createAssets
+    createAssets,
+    updateAsset,
   }  

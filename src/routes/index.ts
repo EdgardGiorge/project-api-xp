@@ -8,7 +8,8 @@ const routes = express.Router();
 
 routes.use('/ativos', assetsRoute);
 routes.use('/conta', accountRoute);
-routes.use('/investimentos/cliente', clientRoute);
-// routes.use('/investimentos/vender', sellRoute);
+routes.use('/investimentos', clientRoute);
+//routes.use('/investimentos/vender', sellRoute);
+
 
 export default routes;

@@ -17,7 +17,14 @@ const getById = async (req: Request, res: Response): Promise<Response> => {
   return res.status(200).json(account);
 };
 
+const createAccount = async (req: Request, res: Response): Promise<Response> => {
+  const createAccount = await accountService.createAccount(req.body);
+
+  return res.status(201).json(createAccount);
+};
+
 export default {
   getAllAccount,
   getById,
+  createAccount
 }

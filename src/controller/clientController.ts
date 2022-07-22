@@ -17,7 +17,14 @@ const getById = async (req: Request, res: Response): Promise<Response> => {
   return res.status(200).json(client);
 };
 
+const createClient = async (req: Request, res: Response): Promise<Response> => {
+  const createClient = await clientService.createClient(req.body);
+
+  return res.status(201).json(createClient);
+};
+
 export default {
   getAllClient,
   getById,
+  createClient
 }

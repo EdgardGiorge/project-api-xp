@@ -1,5 +1,6 @@
-import { RowDataPacket } from "mysql2";
+import { ResultSetHeader, RowDataPacket } from "mysql2";
 import IAccount from "../interfaces/IAccount";
+import IAccountBody from "../interfaces/IAccountBody";
 import connection from "./connection";
 
 const getAllAccount = async (): Promise<IAccount[]> => {
@@ -18,7 +19,17 @@ const getById = async (codCliente: number): Promise<IAccount> => {
   return count as IAccount;
 };
 
+const createAccount = async ({ cliente, saldo }: IAccountBody) => {
+  const [result] = await connection.execute<ResultSetHeader>(
+    `
+  INSERT INTO XP.Cliente (cliente, saldo) VALUES (?, ?)`,
+    [cliente, saldo],
+  );
+  return result;
+}; 
+
   export default {
     getAllAccount,
     getById,
+    createAccount
   }  
