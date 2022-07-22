@@ -4,7 +4,7 @@ CREATE SCHEMA XP;
 USE XP;
 CREATE TABLE `Cliente`(
     `codCliente` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `cliente` CHAR(255) NOT NULL,
+    `cliente` CHAR(255) NOT NULL UNIQUE,
     `saldo` DECIMAL(8, 2) NOT NULL
 );
 CREATE TABLE `Ativo`(
