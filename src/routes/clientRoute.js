@@ -1,6 +1,6 @@
-import express from 'express'
-import clientController from '../controller/clientController';
-import validate from '../middlewares/validate';
+const express = require('express');
+const clientController = require('../controller/clientController');
+const validate = require('../middlewares/validate');
 
 const clientRoute = express.Router();
 
@@ -9,4 +9,4 @@ clientRoute.get('/', clientController.getAllClient);
 clientRoute.get('/:codCliente', clientController.getById);
 clientRoute.post('/', validate, clientController.createClient);
 
-export default clientRoute;
+module.exports = clientRoute;

@@ -2,10 +2,11 @@
   "name": "project-api-xp",
   "version": "1.0.0",
   "description": "Desafio Técnico do processo seletivo da Turma XP – Trybe",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon --exec npx ts-node src/index.ts"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon --ignore coverage src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,22 +20,21 @@
   },
   "homepage": "https://github.com/EdgardGiorge/project-api-xp#readme",
   "devDependencies": {
+    "@types/body-parser": "^1.19.2",
     "@types/eslint": "^8.4.5",
     "@types/express": "^4.17.13",
     "@types/joi": "^17.2.3",
     "@types/node": "^18.0.6",
     "eslint": "^8.20.0",
-    "nodemon": "^2.0.19",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.7.4"
+    "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "date-fns": "^2.28.0",
+    "body-parser": "^1.20.0",
+    "date-fns": "^2.29.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "express-async-errors": "^3.1.1",
+    "http-status-codes": "^2.2.0",
     "joi": "^17.6.0",
-    "mysql2": "^2.3.3",
-    "ts-node": "^10.9.1"
+    "mysql2": "^2.3.3"
   }
 }
