@@ -4,8 +4,8 @@ const accountController = require('../controller/accountController');
 const accountRoute = express.Router();
 
 
-accountRoute.get('/conta', accountController.getAllAccount);
-accountRoute.get('/conta/:codCliente', accountController.getById);
-accountRoute.post('/conta', accountController.createAccount);
+accountRoute.get('/', accountController.getAllAccount);
+accountRoute.get('/:codCliente', accountController.getById);
+accountRoute.post('/', validate, accountController.createAccount);
 
 module.exports = accountRoute;

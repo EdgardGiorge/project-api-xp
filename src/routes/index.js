@@ -9,7 +9,7 @@ const mError = require('../middlewares');
 const routes = express.Router();
 
 routes.use('/ativos', assetsRoute);
-routes.use('/', accountRoute);
+routes.use('/conta', accountRoute);
 routes.use('/investimentos', clientRoute);
 routes.use(mError.mError);
 

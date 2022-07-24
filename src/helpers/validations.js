@@ -17,12 +17,8 @@ const dto = {
   conta: Joi.object({
     cliente: Joi.string().min(3).required(),
     saldo: Joi.number().min(1).required(),
-  }),
+  }),  
   
-  contasaque: Joi.object({
-    codCliente: Joi.number().min(1).required(),
-    saldo: Joi.number().min(1).required(),
-  }),
 }
 
 module.exports = dto;
