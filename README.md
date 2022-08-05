@@ -60,7 +60,7 @@ Inicia o node Y com as perguntas padrões respondidas. Obs. Você deve ter o nod
 Instalar a biblioteca ‘express’.
 
 `npm i express-async-errors` 
-Pacote para ajustes de arquitetura do Express para uso de promise do ES6.
+Suporte pra tratamento de erros em ES6.
 
 `npm install mysql2`
 Este Driver é um software que permite que você se comunique com o banco de dados a partir de uma aplicação.
@@ -116,7 +116,7 @@ Instalar a primeira biblioteca ‘express’.
 Pacote npm de declarações de tipos do Express.
 
 `npm i express-async-errors` 
-Pacote para ajustes de arquitetura do Express para uso de promise do ES6.
+Suporte pra tratamento de erros em ES6.
 
 `npm install mysql2`
 Este Driver é um software que permite que você se comunique com o banco de dados a partir de uma aplicação.
