@@ -255,7 +255,7 @@ GET BY ASSET NAME
   }
   ```
   
-GET BY ALL INVESTIMENTS
+GET BY ALL INVESTMENTS
  - Lista a carteira de investimento dos clientes`/investimentos`:
   ```json
   {
@@ -276,7 +276,7 @@ GET BY ALL INVESTIMENTS
   }
   ```
   
-GET BY INVESTIMENTS 
+GET BY INVESTMENTS 
  - Lista a carteira do cliente pelo código`investimentos/:codCliente`:
   ```json
   {
@@ -333,7 +333,7 @@ POST ACCOUNT REGISTRATION
   }  
   ```
 
-POST INVESTIMENT REGISTRATION
+POST INVESTMENT REGISTRATION
   - Inserção de ações na carteira de investimentos do cliente`/investimentos`:
   ```json
   {
