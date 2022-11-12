@@ -1,12 +1,6 @@
-import Joi, { ObjectSchema } from "joi";
+const Joi = require('joi');
 
-interface IDto {
-  ativos: ObjectSchema
-  investimentos: ObjectSchema
-  conta: ObjectSchema  
-}
-
-const dto: IDto = {
+const dto = {
   ativos: Joi.object({
     ativo: Joi.string().min(3).required(),
     qtdeAtivo: Joi.number().min(1).required(),
@@ -24,6 +18,7 @@ const dto: IDto = {
     cliente: Joi.string().min(3).required(),
     saldo: Joi.number().min(1).required(),
   }),  
+  
 }
 
-export default dto;
+module.exports = dto;

@@ -4,12 +4,12 @@ CREATE SCHEMA XP;
 USE XP;
 CREATE TABLE `Cliente`(
     `codCliente` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `cliente` CHAR(255) NOT NULL UNIQUE,
+    `cliente` CHAR(255) NOT NULL ,
     `saldo` DECIMAL(8, 2) NOT NULL
 );
 CREATE TABLE `Ativo`(
     `codAtivo` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `ativo` CHAR(255) NOT NULL UNIQUE,
+    `ativo` CHAR(255) NOT NULL ,
     `qtdeAtivo` INT NOT NULL,
     `valorAtivo` DECIMAL(8, 2) NOT NULL,
     `data` DATETIME DEFAULT NOW()   
